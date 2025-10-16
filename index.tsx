@@ -39,7 +39,6 @@ export const useReactTruncate = ({
         : 0;
       const containerRect = container.getBoundingClientRect();
       const containerRight = containerRect.right - indicatorWidth;
-      const containerBottom = containerRect.bottom;
 
       let overflowIndex = children.length;
 
@@ -50,11 +49,7 @@ export const useReactTruncate = ({
         }
 
         const childRect = child.getBoundingClientRect();
-
-        const overflowsRight = childRect.right > containerRight;
-        const overflowsBottom = childRect.bottom > containerBottom;
-
-        if (overflowsRight || overflowsBottom) {
+        if (childRect.right > containerRight) {
           overflowIndex = i;
           break;
         }
