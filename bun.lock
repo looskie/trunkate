@@ -3,11 +3,9 @@
   "workspaces": {
     "": {
       "name": "react-truncate",
-      "dependencies": {
-        "bunup": "^0.14.20",
-      },
       "devDependencies": {
         "@types/bun": "latest",
+        "bunup": "^0.14.20",
         "typescript": "^5",
       },
       "peerDependencies": {
