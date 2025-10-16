@@ -1,7 +1,29 @@
 {
-  "name": "react-truncate",
+  "name": "trunkate",
   "module": "dist/index.js",
   "type": "module",
+  "version": "1.0.2",
+  "repository": {
+    "type": "git",
+    "url": "git+github.com/looskie/trunkate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/looskie/trunkate/issues/new"
+  },
+  "author": "Cody Miller <hello@looskie.com>",
+  "files": [
+    "build",
+    "README.md",
+    "package.json"
+  ],
+  "keywords": [
+    "react-truncate",
+    "truncate",
+    "react-ellipsis",
+    "trunkate",
+    "react-truncate-elements",
+    "truncate-elements"
+  ],
   "scripts": {
     "build": "bun build ./index.tsx --outdir ./build --external=react --external=react-dom --minify"
   },
