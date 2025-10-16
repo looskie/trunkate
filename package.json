@@ -2,7 +2,7 @@
   "name": "trunkate",
   "module": "dist/index.js",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "repository": {
     "type": "git",
     "url": "git+github.com/looskie/trunkate.git"
@@ -11,8 +11,9 @@
     "url": "https://github.com/looskie/trunkate/issues/new"
   },
   "author": "Cody Miller <hello@looskie.com>",
+  "types": "./dist/index.tsx",
   "files": [
-    "build",
+    "dist",
     "README.md",
     "package.json"
   ],
@@ -25,10 +26,11 @@
     "truncate-elements"
   ],
   "scripts": {
-    "build": "bun build ./index.tsx --outdir ./build --external=react --external=react-dom --minify"
+    "build": "bun run build.config.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "bun-plugin-dts": "^0.3.0",
     "typescript": "^5"
   },
   "peerDependencies": {
