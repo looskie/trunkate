@@ -1,9 +1,21 @@
 import { useLayoutEffect, useState, type RefObject } from "react";
 
-export const useReactTruncate = ({
+export const useTruncate = ({
   boundary,
+  minBuffer,
 }: {
+  /**
+   * The boundary that it should not flow beyond.
+   *
+   * @note this container must be overflow-hidden, have a defined width, and can not wrap!
+   */
   boundary: RefObject<HTMLElement | null>;
+  /**
+   * Minimum buffer in pixels.
+   *
+   * We use the element that has the `data-truncate-indicator` attribute to determine how much space to leave for the overflow indicator, but if that element is removed or not present, this buffer will be used instead.
+   */
+  minBuffer?: number;
 }) => {
   const [overflowCount, setOverflowCount] = useState(0);
 
@@ -36,7 +48,7 @@ export const useReactTruncate = ({
       );
       const indicatorWidth = overflowIndicator
         ? overflowIndicator.getBoundingClientRect().width
-        : 0;
+        : (minBuffer ?? 0);
       const containerRect = container.getBoundingClientRect();
       const containerRight = containerRect.right - indicatorWidth;
 

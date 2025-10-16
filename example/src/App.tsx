@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect, memo, useMemo } from "react";
-import { useReactTruncate } from "../../index";
+import { useTruncate } from "../../index";
 
 // Generate N labels
 const generateLabels = (count: number) => {
@@ -85,7 +85,7 @@ const LabelRow = memo(function LabelRow({
   labels: ReturnType<typeof generateLabels>;
 }) {
   const container = useRef<HTMLDivElement>(null);
-  const overflowCount = useReactTruncate({
+  const overflowCount = useTruncate({
     boundary: container,
   });
 

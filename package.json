@@ -1,7 +1,10 @@
 {
   "name": "react-truncate",
-  "module": "index.ts",
+  "module": "dist/index.js",
   "type": "module",
+  "scripts": {
+    "build": "bun build ./index.tsx --outdir ./build --external=react --external=react-dom --minify"
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "typescript": "^5"
