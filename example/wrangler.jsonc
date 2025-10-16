@@ -1,0 +1,7 @@
+{
+  "name": "trunkate",
+  "compatibility_date": "2025-10-16",
+  "assets": {
+    "directory": "./dist",
+  },
+}
