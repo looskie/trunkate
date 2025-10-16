@@ -16,7 +16,7 @@ export const useTruncate = ({
    * We use the element that has the `data-truncate-indicator` attribute to determine how much space to leave for the overflow indicator, but if that element is removed or not present, this buffer will be used instead.
    */
   minBuffer?: number;
-}) => {
+}): number => {
   const [overflowCount, setOverflowCount] = useState(0);
 
   useLayoutEffect(() => {
