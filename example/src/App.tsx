@@ -1,5 +1,5 @@
-import { useRef, useState, useEffect, memo, useMemo } from "react";
-import { useTruncate } from "../../index";
+import { memo, useEffect, useMemo, useRef, useState } from "react";
+import { useTruncate } from "trunkate";
 
 // Generate N labels
 const generateLabels = (count: number) => {
