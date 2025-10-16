@@ -2,6 +2,8 @@
 
 a small react package to help you truncate elements! this is especially useful for truncating an inline set of "pills" or "badges"
 
+Demo: https://trunkate.looskie.com
+
 ## installation
 
 ### Bun
